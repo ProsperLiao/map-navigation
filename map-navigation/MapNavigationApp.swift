@@ -8,7 +8,9 @@
 import SwiftUI
 
 @main
-struct map_navigationApp: App {
+struct MapNavigationApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

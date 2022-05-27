@@ -29,3 +29,5 @@ An exercise to use a map(google map) for navigation.
 - [ ] Additional features
     - [ ] GPS signal loss notification
     - [ ] path recalculation
+    - [ ] background usage?
+    - [ ] local push notification when reaching the destination
