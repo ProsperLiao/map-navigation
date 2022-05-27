@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D3C3045ABB7C6D59825755F /* libPods-map-navigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B7C8CA6C11AE06203D9758 /* libPods-map-navigation.a */; };
+		EE00820028418CE300815037 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = EE0081FF28418CE300815037 /* Gemfile */; };
 		EEE677BB2840C46A00933334 /* map_navigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BA2840C46A00933334 /* map_navigationApp.swift */; };
 		EEE677BD2840C46A00933334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BC2840C46A00933334 /* ContentView.swift */; };
 		EEE677BF2840C46E00933334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE677BE2840C46E00933334 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		0D6050AB93C882011F594755 /* Pods-map-navigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map-navigation.release.xcconfig"; path = "Target Support Files/Pods-map-navigation/Pods-map-navigation.release.xcconfig"; sourceTree = "<group>"; };
 		6372E01B2C36D1A9D3DDDAC7 /* Pods-map-navigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map-navigation.debug.xcconfig"; path = "Target Support Files/Pods-map-navigation/Pods-map-navigation.debug.xcconfig"; sourceTree = "<group>"; };
 		76B7C8CA6C11AE06203D9758 /* libPods-map-navigation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-map-navigation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0081FF28418CE300815037 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		EEE677B72840C46A00933334 /* map-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "map-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE677BA2840C46A00933334 /* map_navigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map_navigationApp.swift; sourceTree = "<group>"; };
 		EEE677BC2840C46A00933334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		EEE677AE2840C46900933334 = {
 			isa = PBXGroup;
 			children = (
+				EE0081FF28418CE300815037 /* Gemfile */,
 				EEE677EC28413C0700933334 /* Podfile */,
 				EEE677E82840C54E00933334 /* README.md */,
 				EEE677E52840C54500933334 /* .gitignore */,
@@ -273,6 +276,7 @@
 				EEE677E72840C54500933334 /* .gitignore in Resources */,
 				EEE677E62840C54500933334 /* LICENSE in Resources */,
 				EEE677E92840C54E00933334 /* README.md in Resources */,
+				EE00820028418CE300815037 /* Gemfile in Resources */,
 				EEE677C22840C46E00933334 /* Preview Assets.xcassets in Resources */,
 				EEE677BF2840C46E00933334 /* Assets.xcassets in Resources */,
 			);
