@@ -11,12 +11,12 @@ An exercise to use a map(google map) for navigation. This app is iOS 15.0 and ab
 ### Steps to Build this App
 - [X] Initialize the project and clone to local.
 - [X] Browse the Google Map SDK document.
-- [ ] `milestone` Download the sdk, and integrate it into this app show the simplest map. 
-    - [ ] setup google cloud platform, enable billing, enable Google map sdk for ios
-    - [ ] create API key, secure the API key with App Bundle Identifier restriction and quota limit.
+- [X] `milestone` Download the sdk, and integrate it into this app, show the simplest map. 
+    - [X] setup google cloud platform, enable billing, enable Google map sdk for ios
+    - [X] create API key, secure the API key with App Bundle Identifier restriction and quota limit.
     - [X] use cocoapods to install the GoogleMaps sdk.
     - [X] add API key with cocoapods-keys plugin for obfuscation.
-    - [ ] integrate GoogleMaps view into the app for the simple usage.
+    - [X] integrate GoogleMaps view into the app for the simple usage.
         - get the API key in AppDelegate
         - use UIViewRepresentable to integrate the GMSMapView into SwiftUI
     
