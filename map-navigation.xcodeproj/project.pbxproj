@@ -10,6 +10,7 @@
 		95EE4ADCB9C2FBD2C0BE1A23 /* Pods_map_navigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF62AD18BC29B55524DF1B7 /* Pods_map_navigation.framework */; };
 		EE00820028418CE300815037 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = EE0081FF28418CE300815037 /* Gemfile */; };
 		EE008202284195C700815037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE008201284195C700815037 /* AppDelegate.swift */; };
+		EE00820428419E2D00815037 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820328419E2D00815037 /* MapView.swift */; };
 		EEE677BB2840C46A00933334 /* MapNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BA2840C46A00933334 /* MapNavigationApp.swift */; };
 		EEE677BD2840C46A00933334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BC2840C46A00933334 /* ContentView.swift */; };
 		EEE677BF2840C46E00933334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE677BE2840C46E00933334 /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		6372E01B2C36D1A9D3DDDAC7 /* Pods-map-navigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map-navigation.debug.xcconfig"; path = "Target Support Files/Pods-map-navigation/Pods-map-navigation.debug.xcconfig"; sourceTree = "<group>"; };
 		EE0081FF28418CE300815037 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		EE008201284195C700815037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE00820328419E2D00815037 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EE00820528419F4C00815037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EEE677B72840C46A00933334 /* map-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "map-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE677BA2840C46A00933334 /* MapNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationApp.swift; sourceTree = "<group>"; };
 		EEE677BC2840C46A00933334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,8 +138,10 @@
 		EEE677B92840C46A00933334 /* map-navigation */ = {
 			isa = PBXGroup;
 			children = (
+				EE00820528419F4C00815037 /* Info.plist */,
 				EEE677BA2840C46A00933334 /* MapNavigationApp.swift */,
 				EEE677BC2840C46A00933334 /* ContentView.swift */,
+				EE00820328419E2D00815037 /* MapView.swift */,
 				EE008201284195C700815037 /* AppDelegate.swift */,
 				EEE677BE2840C46E00933334 /* Assets.xcassets */,
 				EEE677C02840C46E00933334 /* Preview Content */,
@@ -367,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE008202284195C700815037 /* AppDelegate.swift in Sources */,
+				EE00820428419E2D00815037 /* MapView.swift in Sources */,
 				EEE677BD2840C46A00933334 /* ContentView.swift in Sources */,
 				EEE677BB2840C46A00933334 /* MapNavigationApp.swift in Sources */,
 			);
@@ -531,6 +537,7 @@
 				DEVELOPMENT_TEAM = A8UB7LJGV7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "map-navigation/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -561,6 +568,7 @@
 				DEVELOPMENT_TEAM = A8UB7LJGV7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "map-navigation/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

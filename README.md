@@ -1,5 +1,5 @@
 # map-navigation
-An exercise to use a map(google map) for navigation. 
+An exercise to use a map(google map) for navigation. This app is iOS 15.0 and above supported.
 
 ### How to Use
 - run `gem install bundler` if you don't have bundler in your environment.
@@ -17,6 +17,8 @@ An exercise to use a map(google map) for navigation.
     - [X] use cocoapods to install the GoogleMaps sdk.
     - [X] add API key with cocoapods-keys plugin for obfuscation.
     - [ ] integrate GoogleMaps view into the app for the simple usage.
+        - get the API key in AppDelegate
+        - use UIViewRepresentable to integrate the GMSMapView into SwiftUI
     
 - [ ] Add feature that user can tap on the map to select a destination.
 - [ ] `milestone` Add the start button, once it's clicked, navigate to the destination. 
@@ -31,3 +33,6 @@ An exercise to use a map(google map) for navigation.
     - [ ] path recalculation
     - [ ] background usage?
     - [ ] local push notification when reaching the destination
+
+
+### 

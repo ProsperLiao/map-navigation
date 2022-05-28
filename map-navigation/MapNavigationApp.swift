@@ -1,6 +1,6 @@
 //
-//  map_navigationApp.swift
-//  map-navigation
+//  MapNavigationApp.swift
+//  MapNavigation
 //
 //  Created by Hongxing Liao on 2022/5/27.
 //
