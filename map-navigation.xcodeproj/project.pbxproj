@@ -11,8 +11,12 @@
 		EE00820028418CE300815037 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = EE0081FF28418CE300815037 /* Gemfile */; };
 		EE008202284195C700815037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE008201284195C700815037 /* AppDelegate.swift */; };
 		EE00820428419E2D00815037 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820328419E2D00815037 /* MapView.swift */; };
+		EE00820728433EA100815037 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820628433EA100815037 /* Navigation.swift */; };
+		EE00820828433EA100815037 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820628433EA100815037 /* Navigation.swift */; };
+		EE00820A28433EBD00815037 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820928433EBD00815037 /* NavigationViewModel.swift */; };
+		EE00820B28433EBD00815037 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820928433EBD00815037 /* NavigationViewModel.swift */; };
 		EEE677BB2840C46A00933334 /* MapNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BA2840C46A00933334 /* MapNavigationApp.swift */; };
-		EEE677BD2840C46A00933334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BC2840C46A00933334 /* ContentView.swift */; };
+		EEE677BD2840C46A00933334 /* MapNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BC2840C46A00933334 /* MapNavigationView.swift */; };
 		EEE677BF2840C46E00933334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE677BE2840C46E00933334 /* Assets.xcassets */; };
 		EEE677C22840C46E00933334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE677C12840C46E00933334 /* Preview Assets.xcassets */; };
 		EEE677CC2840C46F00933334 /* map_navigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677CB2840C46F00933334 /* map_navigationTests.swift */; };
@@ -49,9 +53,11 @@
 		EE008201284195C700815037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE00820328419E2D00815037 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		EE00820528419F4C00815037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EE00820628433EA100815037 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		EE00820928433EBD00815037 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		EEE677B72840C46A00933334 /* map-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "map-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE677BA2840C46A00933334 /* MapNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationApp.swift; sourceTree = "<group>"; };
-		EEE677BC2840C46A00933334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EEE677BC2840C46A00933334 /* MapNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationView.swift; sourceTree = "<group>"; };
 		EEE677BE2840C46E00933334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEE677C12840C46E00933334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEE677C72840C46F00933334 /* map-navigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "map-navigationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,9 +146,11 @@
 			children = (
 				EE00820528419F4C00815037 /* Info.plist */,
 				EEE677BA2840C46A00933334 /* MapNavigationApp.swift */,
-				EEE677BC2840C46A00933334 /* ContentView.swift */,
-				EE00820328419E2D00815037 /* MapView.swift */,
 				EE008201284195C700815037 /* AppDelegate.swift */,
+				EEE677BC2840C46A00933334 /* MapNavigationView.swift */,
+				EE00820328419E2D00815037 /* MapView.swift */,
+				EE00820628433EA100815037 /* Navigation.swift */,
+				EE00820928433EBD00815037 /* NavigationViewModel.swift */,
 				EEE677BE2840C46E00933334 /* Assets.xcassets */,
 				EEE677C02840C46E00933334 /* Preview Content */,
 			);
@@ -371,9 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE00820A28433EBD00815037 /* NavigationViewModel.swift in Sources */,
 				EE008202284195C700815037 /* AppDelegate.swift in Sources */,
 				EE00820428419E2D00815037 /* MapView.swift in Sources */,
-				EEE677BD2840C46A00933334 /* ContentView.swift in Sources */,
+				EE00820728433EA100815037 /* Navigation.swift in Sources */,
+				EEE677BD2840C46A00933334 /* MapNavigationView.swift in Sources */,
 				EEE677BB2840C46A00933334 /* MapNavigationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +392,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE00820B28433EBD00815037 /* NavigationViewModel.swift in Sources */,
 				EEE677CC2840C46F00933334 /* map_navigationTests.swift in Sources */,
+				EE00820828433EA100815037 /* Navigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

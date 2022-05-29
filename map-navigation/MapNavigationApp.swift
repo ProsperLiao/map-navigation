@@ -11,9 +11,12 @@ import SwiftUI
 struct MapNavigationApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
+    let navigationViewModel = NavigationViewModel(with: Navigation())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MapNavigationView()
+                .environmentObject(navigationViewModel)
         }
     }
 }

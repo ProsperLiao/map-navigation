@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>googlechromes</string>
-        <string>comgooglemaps</string>
-    </array>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app need to use your location for navigation.</string>
 </dict>
 </plist>

@@ -19,8 +19,10 @@ An exercise to use a map(google map) for navigation. This app is iOS 15.0 and ab
     - [X] integrate GoogleMaps view into the app for the simple usage.
         - get the API key in AppDelegate
         - use UIViewRepresentable to integrate the GMSMapView into SwiftUI
-    
-- [ ] Add feature that user can tap on the map to select a destination.
+
+- [X] Construct the MVVM pattern.
+- [X] Make the map started with locating at the user current location. 
+- [X] Add feature that user can tap on the map to select a destination.
 - [ ] `milestone` Add the start button, once it's clicked, navigate to the destination. 
     - [ ] traveled path in real time
 - [ ] `milestone` Summary of the trip
