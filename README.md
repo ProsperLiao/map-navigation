@@ -1,13 +1,18 @@
 # map-navigation
 An exercise to use a map(google map) for navigation. This app is iOS 15.0 and above supported.
 
-### How to Use
+
+---
+### How to Run this App
+- run `cd ${PATH_OF_YOUR_SOURCE_ROOT}`
 - run `gem install bundler` if you don't have bundler in your environment.
 - run `bundle install` to install cocoapods and cocoapods-keys, which are specified in Gemfile.
 - run `bundle pod install` to install dependencies specified in Podfile.
-- when asked, provide your own Google Maps API Key.
+- The firs time your run bundle pod install, you'll be asked to provide the Google Maps API key ,  please provide your own Google Maps API Key.
+- open `map-navigation.xcworkspace` with Xcode, if you run it on simultor, you need to simulate location with xcode debugger.
 
 
+---
 ### Steps to Build this App
 - [X] Initialize the project and clone to local.
 - [X] Browse the Google Map SDK document.
