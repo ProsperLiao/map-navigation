@@ -15,6 +15,7 @@
 		EE00820828433EA100815037 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820628433EA100815037 /* Navigation.swift */; };
 		EE00820A28433EBD00815037 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820928433EBD00815037 /* NavigationViewModel.swift */; };
 		EE00820B28433EBD00815037 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820928433EBD00815037 /* NavigationViewModel.swift */; };
+		EEAF99932843DD280028EE28 /* GoogleMapsDirectionsx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF99922843DD280028EE28 /* GoogleMapsDirectionsx.swift */; };
 		EEE677BB2840C46A00933334 /* MapNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BA2840C46A00933334 /* MapNavigationApp.swift */; };
 		EEE677BD2840C46A00933334 /* MapNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BC2840C46A00933334 /* MapNavigationView.swift */; };
 		EEE677BF2840C46E00933334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE677BE2840C46E00933334 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		EE00820528419F4C00815037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EE00820628433EA100815037 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		EE00820928433EBD00815037 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		EEAF99922843DD280028EE28 /* GoogleMapsDirectionsx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsDirectionsx.swift; sourceTree = "<group>"; };
 		EEE677B72840C46A00933334 /* map-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "map-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE677BA2840C46A00933334 /* MapNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationApp.swift; sourceTree = "<group>"; };
 		EEE677BC2840C46A00933334 /* MapNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				EE00820328419E2D00815037 /* MapView.swift */,
 				EE00820628433EA100815037 /* Navigation.swift */,
 				EE00820928433EBD00815037 /* NavigationViewModel.swift */,
+				EEAF99922843DD280028EE28 /* GoogleMapsDirectionsx.swift */,
 				EEE677BE2840C46E00933334 /* Assets.xcassets */,
 				EEE677C02840C46E00933334 /* Preview Content */,
 			);
@@ -382,6 +385,7 @@
 				EE00820A28433EBD00815037 /* NavigationViewModel.swift in Sources */,
 				EE008202284195C700815037 /* AppDelegate.swift in Sources */,
 				EE00820428419E2D00815037 /* MapView.swift in Sources */,
+				EEAF99932843DD280028EE28 /* GoogleMapsDirectionsx.swift in Sources */,
 				EE00820728433EA100815037 /* Navigation.swift in Sources */,
 				EEE677BD2840C46A00933334 /* MapNavigationView.swift in Sources */,
 				EEE677BB2840C46A00933334 /* MapNavigationApp.swift in Sources */,

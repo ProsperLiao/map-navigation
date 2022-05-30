@@ -6,19 +6,44 @@
 //
 
 import SwiftUI
+import GoogleMapsDirections
 
 struct MapNavigationView: View {
-    @EnvironmentObject var navigationViewModel: NavigationViewModel
+    @EnvironmentObject var viewModel: NavigationViewModel
     
     var body: some View {
-        MapView()
+        ZStack {
+            MapView(viewModel: viewModel)
+                .ignoresSafeArea()
+            
+            VStack {
+                Spacer()
+                
+                HStack {
+                    Button("Start Navigation") {
+                        viewModel.startNavigation()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.green)
+                    .controlSize(.regular)
+                    .disabled(viewModel.isNavigating || viewModel.destination == nil)
+                    Button("Cancel") {
+                        viewModel.cancelNavigation()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.red)
+                    .controlSize(.regular)
+                    .disabled(!viewModel.isNavigating)
+                }
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let navigationViewModel = NavigationViewModel(with: Navigation())
+        let viewModel = NavigationViewModel(with: Navigation())
         MapNavigationView()
-            .environmentObject(navigationViewModel)
+            .environmentObject(viewModel)
     }
 }

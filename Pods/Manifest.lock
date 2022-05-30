@@ -1,27 +1,39 @@
 PODS:
+  - Alamofire (4.9.1)
   - GoogleMaps (6.2.1):
     - GoogleMaps/Maps (= 6.2.1)
   - GoogleMaps/Base (6.2.1)
   - GoogleMaps/Maps (6.2.1):
     - GoogleMaps/Base
+  - GoogleMapsDirections (1.1.4):
+    - Alamofire (~> 4)
+    - ObjectMapper (~> 3)
   - Keys (1.0.1)
+  - ObjectMapper (3.5.3)
 
 DEPENDENCIES:
   - GoogleMaps (= 6.2.1)
+  - GoogleMapsDirections
   - Keys (from `Pods/CocoaPodsKeys`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - GoogleMaps
+    - GoogleMapsDirections
+    - ObjectMapper
 
 EXTERNAL SOURCES:
   Keys:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   GoogleMaps: 20d7b12be49a14287f797e88e0e31bc4156aaeb4
+  GoogleMapsDirections: 4534565f7df3e57cb3e77f68d44d6383bb92194a
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
 
-PODFILE CHECKSUM: ed6e97be4f6f5a48bbae45cad433c9f85a8ffea9
+PODFILE CHECKSUM: 9993e8c5cb59982c7f285c9a77d3a7cb37740beb
 
 COCOAPODS: 1.11.3
