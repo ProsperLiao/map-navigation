@@ -15,6 +15,14 @@
 		EE00820828433EA100815037 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820628433EA100815037 /* Navigation.swift */; };
 		EE00820A28433EBD00815037 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820928433EBD00815037 /* NavigationViewModel.swift */; };
 		EE00820B28433EBD00815037 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00820928433EBD00815037 /* NavigationViewModel.swift */; };
+		EEA528F928449BB2005243AE /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA528F028449BB2005243AE /* Math.swift */; };
+		EEA528FA28449BB2005243AE /* GMSPath+GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA528F128449BB2005243AE /* GMSPath+GeometryUtils.swift */; };
+		EEA528FB28449BB2005243AE /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA528F228449BB2005243AE /* MapPoint.swift */; };
+		EEA528FC28449BB2005243AE /* LatLngRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA528F428449BB2005243AE /* LatLngRadians.swift */; };
+		EEA528FD28449BB2005243AE /* CatesianPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA528F528449BB2005243AE /* CatesianPoint.swift */; };
+		EEA528FE28449BB2005243AE /* CLLocationCoordinate2D+GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA528F628449BB2005243AE /* CLLocationCoordinate2D+GeometryUtils.swift */; };
+		EEA528FF28449BB2005243AE /* GMSPolyline+GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA528F728449BB2005243AE /* GMSPolyline+GeometryUtils.swift */; };
+		EEA5290028449BB2005243AE /* GMSPolygon+GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA528F828449BB2005243AE /* GMSPolygon+GeometryUtils.swift */; };
 		EEAF99932843DD280028EE28 /* GoogleMapsDirectionsx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF99922843DD280028EE28 /* GoogleMapsDirectionsx.swift */; };
 		EEE677BB2840C46A00933334 /* MapNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BA2840C46A00933334 /* MapNavigationApp.swift */; };
 		EEE677BD2840C46A00933334 /* MapNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE677BC2840C46A00933334 /* MapNavigationView.swift */; };
@@ -56,6 +64,14 @@
 		EE00820528419F4C00815037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EE00820628433EA100815037 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		EE00820928433EBD00815037 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		EEA528F028449BB2005243AE /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		EEA528F128449BB2005243AE /* GMSPath+GeometryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMSPath+GeometryUtils.swift"; sourceTree = "<group>"; };
+		EEA528F228449BB2005243AE /* MapPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
+		EEA528F428449BB2005243AE /* LatLngRadians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatLngRadians.swift; sourceTree = "<group>"; };
+		EEA528F528449BB2005243AE /* CatesianPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatesianPoint.swift; sourceTree = "<group>"; };
+		EEA528F628449BB2005243AE /* CLLocationCoordinate2D+GeometryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+GeometryUtils.swift"; sourceTree = "<group>"; };
+		EEA528F728449BB2005243AE /* GMSPolyline+GeometryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMSPolyline+GeometryUtils.swift"; sourceTree = "<group>"; };
+		EEA528F828449BB2005243AE /* GMSPolygon+GeometryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMSPolygon+GeometryUtils.swift"; sourceTree = "<group>"; };
 		EEAF99922843DD280028EE28 /* GoogleMapsDirectionsx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsDirectionsx.swift; sourceTree = "<group>"; };
 		EEE677B72840C46A00933334 /* map-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "map-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE677BA2840C46A00933334 /* MapNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationApp.swift; sourceTree = "<group>"; };
@@ -116,6 +132,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EEA528EF28449BB2005243AE /* GeometryUtils */ = {
+			isa = PBXGroup;
+			children = (
+				EEA528F028449BB2005243AE /* Math.swift */,
+				EEA528F128449BB2005243AE /* GMSPath+GeometryUtils.swift */,
+				EEA528F228449BB2005243AE /* MapPoint.swift */,
+				EEA528F328449BB2005243AE /* Internal */,
+				EEA528F628449BB2005243AE /* CLLocationCoordinate2D+GeometryUtils.swift */,
+				EEA528F728449BB2005243AE /* GMSPolyline+GeometryUtils.swift */,
+				EEA528F828449BB2005243AE /* GMSPolygon+GeometryUtils.swift */,
+			);
+			path = GeometryUtils;
+			sourceTree = "<group>";
+		};
+		EEA528F328449BB2005243AE /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				EEA528F428449BB2005243AE /* LatLngRadians.swift */,
+				EEA528F528449BB2005243AE /* CatesianPoint.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
 		EEE677AE2840C46900933334 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +185,7 @@
 		EEE677B92840C46A00933334 /* map-navigation */ = {
 			isa = PBXGroup;
 			children = (
+				EEA528EF28449BB2005243AE /* GeometryUtils */,
 				EE00820528419F4C00815037 /* Info.plist */,
 				EEE677BA2840C46A00933334 /* MapNavigationApp.swift */,
 				EE008201284195C700815037 /* AppDelegate.swift */,
@@ -384,11 +424,19 @@
 			files = (
 				EE00820A28433EBD00815037 /* NavigationViewModel.swift in Sources */,
 				EE008202284195C700815037 /* AppDelegate.swift in Sources */,
+				EEA528FA28449BB2005243AE /* GMSPath+GeometryUtils.swift in Sources */,
 				EE00820428419E2D00815037 /* MapView.swift in Sources */,
+				EEA528FD28449BB2005243AE /* CatesianPoint.swift in Sources */,
 				EEAF99932843DD280028EE28 /* GoogleMapsDirectionsx.swift in Sources */,
+				EEA528FC28449BB2005243AE /* LatLngRadians.swift in Sources */,
+				EEA528FE28449BB2005243AE /* CLLocationCoordinate2D+GeometryUtils.swift in Sources */,
+				EEA5290028449BB2005243AE /* GMSPolygon+GeometryUtils.swift in Sources */,
 				EE00820728433EA100815037 /* Navigation.swift in Sources */,
+				EEA528FF28449BB2005243AE /* GMSPolyline+GeometryUtils.swift in Sources */,
 				EEE677BD2840C46A00933334 /* MapNavigationView.swift in Sources */,
+				EEA528FB28449BB2005243AE /* MapPoint.swift in Sources */,
 				EEE677BB2840C46A00933334 /* MapNavigationApp.swift in Sources */,
+				EEA528F928449BB2005243AE /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,13 +36,8 @@ struct MapView: UIViewRepresentable {
     func updateUIView(_ uiView: GMSMapView, context: Context) {
         debugPrint("update UI View")
         debugPrint(viewModel.routes as Any)
-//        if viewModel.isNavigating {
-            if let route = viewModel.routes?.first, let points = route.overviewPolylinePoints as String? {
-                if let path = GMSPath.init(fromEncodedPath: points) {
-                    setPath(path: path, map: uiView)
-                }
-            }
-//        }
+        
+        context.coordinator.setPath(routePath: viewModel.routePath, userPath: viewModel.userPath, map: uiView)
         if viewModel.clearMapView {
             uiView.clear()
         }
@@ -55,6 +50,9 @@ struct MapView: UIViewRepresentable {
     
     class Coordinator: NSObject, GMSMapViewDelegate {
         let viewModel: NavigationViewModel
+        
+        var routeLine: GMSPolyline?
+        var userLine: GMSPolyline?
         
         init(with viewModel: NavigationViewModel) {
             self.viewModel = viewModel
@@ -70,28 +68,39 @@ struct MapView: UIViewRepresentable {
             viewModel.destination = coordinate
         }
         
-    }
-    
-    
-    func setPath(path: GMSPath, map: GMSMapView) {
-        map.clear()
-        let polyline = GMSPolyline.init(path: path)
-        polyline.strokeColor = .red
-        polyline.strokeWidth = 5
-        polyline.map = map
+        func setPath(routePath: GMSPath?, userPath: GMSPath?, map: GMSMapView) {
+            routeLine?.map = nil
+            userLine?.map = nil
+            if let routePath = routePath {
+                routeLine = GMSPolyline.init(path: routePath)
+                routeLine?.strokeColor = UIColor.blue
+                routeLine?.strokeWidth = 5
+                routeLine?.map = map
+            }
+            if let userPath = userPath {
+                userLine = GMSPolyline.init(path: userPath)
+                userLine?.strokeColor = .red
+                userLine?.strokeWidth = 5
+                userLine?.map = map
+            }
 
-        var bounds = GMSCoordinateBounds()
+    //        var bounds = GMSCoordinateBounds()
+    //
+    //        for index in 1...path.count() {
+    //            bounds = bounds.includingCoordinate(path.coordinate(at: index))
+    //        }
+    //
+    //        map.moveCamera(GMSCameraUpdate.fit(bounds))
 
-        for index in 1...path.count() {
-            bounds = bounds.includingCoordinate(path.coordinate(at: index))
+            //optional - get distance of the route in kms!
+    //        let mtrs = GMSGeometryLength(path)
+    //        dist = mtrs/1000.0
+    //        print("The distance of the route is \(dist) km")
+            
         }
-
-        map.moveCamera(GMSCameraUpdate.fit(bounds))
-
-        //optional - get distance of the route in kms!
-//        let mtrs = GMSGeometryLength(path)
-//        dist = mtrs/1000.0
-//        print("The distance of the route is \(dist) km")
         
     }
+    
+    
+   
 }

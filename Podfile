@@ -9,6 +9,7 @@ target 'map-navigation' do
 #  pod 'Alamofire'
 #  pod 'ObjectMapper'
   pod 'GoogleMapsDirections'
+ # pod 'Google-Maps-iOS-Utils', '~> 4.1.0'    # 防火墙问题？ 加载不了，改用源码。
   
   # Use this plugin to manage the api key safely.
   # Check the details in `https://github.com/orta/cocoapods-keys`

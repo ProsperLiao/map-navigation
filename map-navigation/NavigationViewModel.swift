@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 import GoogleMapsDirections
+import GoogleMaps
 import Keys
 
 
@@ -16,10 +17,24 @@ import Keys
 class NavigationViewModel: NSObject, ObservableObject {
     @Published private var model: Navigation
     
+    var userPathPoints: [CLLocationCoordinate2D] {
+        model.userPathPoints.map { location in
+            CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+        }
+    }
+    
+    var userPath: GMSPath? {
+        model.userPath
+    }
+    
     var timer: Timer?
     
     var routes: [GoogleMapsDirections.Response.Route]? {
         model.routes
+    }
+    
+    var routePath: GMSPath? {
+        model.routePath
     }
     
     var destination: CLLocationCoordinate2D? {
@@ -128,7 +143,11 @@ extension NavigationViewModel: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation = locations.last
         model.currentLocation = GoogleMapsDirections.LocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
-        requestDirections()
+        
+        if let routePath = model.routePath, !routePath.isOnPath(coordinate: CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude), geodesic: false, tolerance: 5) {
+            requestDirections()
+        }
+        
         userLocationUpdateHandler?(CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude))
         userLocationUpdateHandler = nil
         locationManager.stopUpdatingLocation()

@@ -7,6 +7,7 @@
 
 import Foundation
 import GoogleMapsDirections
+import GoogleMaps
 import Keys
 
 // model layer
@@ -28,8 +29,29 @@ struct Navigation {
     var isNavigating: Bool = false
     
     var routes: [GoogleMapsDirections.Response.Route]?
+    var routePath: GMSPath? {
+        if let route = routes?.first, let points = route.overviewPolylinePoints as String? {
+            if let path = GMSPath.init(fromEncodedPath: points) {
+                return path
+            }
+        }
+        return nil
+    }
     
     var userPathPoints = [LocationCoordinate2D]()
+    
+    var userPath: GMSPath? {
+        if userPathPoints.count > 1 {
+            let path = GMSMutablePath()
+            for coord in userPathPoints {
+                path.addLatitude(coord.latitude, longitude: coord.longitude)
+            }
+            return path
+        } else {
+            return nil
+        }
+    }
+    
 }
 
 extension GoogleMapsDirections.LocationCoordinate2D: Equatable {
