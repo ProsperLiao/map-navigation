@@ -17,6 +17,8 @@ import Keys
 class NavigationViewModel: NSObject, ObservableObject {
     @Published private var model: Navigation
     
+    var gpsSignalLoss = false
+    
     var userPathPoints: [CLLocationCoordinate2D] {
         model.userPathPoints.map { location in
             CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
@@ -163,6 +165,11 @@ class NavigationViewModel: NSObject, ObservableObject {
 extension NavigationViewModel: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation = locations.last
+        
+        if let location = userLocation {
+            checkAccuracy(location)
+        }
+        
         let userLocationCoor = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         model.currentLocation = GoogleMapsDirections.LocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         
@@ -186,6 +193,14 @@ extension NavigationViewModel: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         debugPrint(error)
 //        locationManager.stopUpdatingLocation()
+    }
+    
+    func checkAccuracy(_ location: CLLocation) {
+        if location.horizontalAccuracy <= 0 {
+            gpsSignalLoss = true
+        } else {
+            gpsSignalLoss = false
+        }
     }
     
 }

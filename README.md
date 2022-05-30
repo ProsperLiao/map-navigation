@@ -38,7 +38,7 @@ This app is iOS 15.0 and above supported.
     - [x] Elapsed trip time
     - [x] Total distance traveled
 
-- [ ] Additional features
-    - [ ] GPS signal loss notification
+- [x] Additional features
+    - [x] GPS signal loss notification
     - [x] path recalculation
 

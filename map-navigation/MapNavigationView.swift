@@ -17,6 +17,9 @@ struct MapNavigationView: View {
                 .ignoresSafeArea()
             
             VStack {
+                if viewModel.gpsSignalLoss {
+                    Text("Warn: GPS signal loss!")
+                }
                 if viewModel.isFinished {
                     VStack {
                         Text("Elapsed Time: \(viewModel.elapsedTime ?? 0) seconds")
