@@ -38,6 +38,10 @@ struct MapView: UIViewRepresentable {
         debugPrint(viewModel.routes as Any)
         
         context.coordinator.setPath(routePath: viewModel.routePath, userPath: viewModel.userPath, map: uiView)
+        
+        if viewModel.isFinished {
+            context.coordinator.finish(routePath: viewModel.routePath, userPath: viewModel.userPath, map: uiView)
+        }
         if viewModel.clearMapView {
             uiView.clear()
         }
@@ -73,34 +77,49 @@ struct MapView: UIViewRepresentable {
             userLine?.map = nil
             if let routePath = routePath {
                 routeLine = GMSPolyline.init(path: routePath)
-                routeLine?.strokeColor = UIColor.blue
-                routeLine?.strokeWidth = 5
+                routeLine?.strokeColor = .green
+                routeLine?.strokeWidth = 8
                 routeLine?.map = map
             }
             if let userPath = userPath {
                 userLine = GMSPolyline.init(path: userPath)
                 userLine?.strokeColor = .red
-                userLine?.strokeWidth = 5
+                userLine?.strokeWidth = 3
                 userLine?.map = map
             }
-
-    //        var bounds = GMSCoordinateBounds()
-    //
-    //        for index in 1...path.count() {
-    //            bounds = bounds.includingCoordinate(path.coordinate(at: index))
-    //        }
-    //
-    //        map.moveCamera(GMSCameraUpdate.fit(bounds))
+        }
+        
+        func finish(routePath: GMSPath?, userPath: GMSPath?, map: GMSMapView) {
+//            routeLine?.map = nil
+            userLine?.map = nil
+//            if let routePath = routePath {
+//                routeLine = GMSPolyline.init(path: routePath)
+//                routeLine?.strokeColor = UIColor.blue
+//                routeLine?.strokeWidth = 5
+//                routeLine?.map = map
+//            }
+//            if let userPath = userPath {
+//                userLine = GMSPolyline.init(path: userPath)
+//                userLine?.strokeColor = .red
+//                userLine?.strokeWidth = 5
+//                userLine?.map = map
+//            }
+            
+            if let path = userLine?.path {
+                var bounds = GMSCoordinateBounds()
+                for index in 1...path.count() {
+                    bounds = bounds.includingCoordinate(userLine!.path!.coordinate(at: index))
+                }
+                
+                map.moveCamera(GMSCameraUpdate.fit(bounds))
+            }
+        }
 
             //optional - get distance of the route in kms!
     //        let mtrs = GMSGeometryLength(path)
     //        dist = mtrs/1000.0
     //        print("The distance of the route is \(dist) km")
             
-        }
-        
     }
     
-    
-   
 }

@@ -54,6 +54,18 @@ class NavigationViewModel: NSObject, ObservableObject {
         }
     }
     
+    var elapsedTime: Double? {
+        model.elapsedTime
+    }
+    
+    var travelDistance: Double {
+        model.travelDistance
+    }
+    
+    var isFinished: Bool {
+        model.isFininshed
+    }
+    
     var isNavigating: Bool {
         model.isNavigating
     }
@@ -98,13 +110,22 @@ class NavigationViewModel: NSObject, ObservableObject {
         timer?.invalidate()
     }
     
+    func finishNavigation() {
+        model.finishDate = Date()
+        model.isFininshed = true
+        model.isNavigating = false
+    }
+    
     func startNavigation(by travelMode: GoogleMapsDirections.TravelMode = .walking) {
         guard !model.isNavigating else { return }
         guard let current = model.currentLocation, let _ = model.destination else { return }
+        model.startDate = Date()
+        model.isFininshed = false
         model.isNavigating = true
         model.origin = current
         model.travelMode = travelMode
         requestDirections()
+        locationManager.startUpdatingLocation()
         
         timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
             self?.locationManager.startUpdatingLocation()
@@ -142,10 +163,19 @@ class NavigationViewModel: NSObject, ObservableObject {
 extension NavigationViewModel: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation = locations.last
+        let userLocationCoor = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         model.currentLocation = GoogleMapsDirections.LocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         
-        if let routePath = model.routePath, !routePath.isOnPath(coordinate: CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude), geodesic: false, tolerance: 5) {
+        if let routePath = model.routePath, !routePath.isOnPath(coordinate: userLocationCoor, geodesic: false, tolerance: 5) {
             requestDirections()
+        }
+        
+        if let destination = model.destination {
+            let dest = CLLocationCoordinate2D(latitude: destination.latitude, longitude: destination.longitude)
+            let distance = GMSGeometryDistance(userLocationCoor, dest)
+            if distance < 50 && !isFinished {
+                finishNavigation()
+            }
         }
         
         userLocationUpdateHandler?(CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude))

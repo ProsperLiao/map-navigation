@@ -17,6 +17,12 @@ struct MapNavigationView: View {
                 .ignoresSafeArea()
             
             VStack {
+                if viewModel.isFinished {
+                    VStack {
+                        Text("Elapsed Time: \(viewModel.elapsedTime ?? 0) seconds")
+                        Text("Total distance traveled: \(viewModel.travelDistance)")
+                    }.foregroundColor(.red)
+                }
                 Spacer()
                 
                 HStack {

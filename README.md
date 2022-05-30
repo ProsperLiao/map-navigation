@@ -31,10 +31,10 @@ An exercise to use a map(google map) for navigation. This app is iOS 15.0 and ab
 - [x] `milestone` Add the start button, once it's clicked, navigate to the destination. 
     - [x] Add Alamofire for network request
     - [x] traveled path in real time
-- [ ] `milestone` Summary of the trip
-    - [ ] A map showing the traveled path
-    - [ ] Elapsed trip time
-    - [ ] Total distance traveled
+- [x] `milestone` Summary of the trip
+    - [x] A map showing the traveled path
+    - [x] Elapsed trip time
+    - [x] Total distance traveled
 
 - [ ] Additional features
     - [ ] GPS signal loss notification

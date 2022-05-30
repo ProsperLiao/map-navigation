@@ -17,8 +17,12 @@ struct Navigation {
     
     var currentLocation: LocationCoordinate2D? {
         didSet {
-            if let current = currentLocation, isNavigating && current != oldValue{
-                userPathPoints.append(current)
+            if isNavigating && !isFininshed {
+                if let current = currentLocation {
+                    if current != oldValue {
+                        userPathPoints.append(current)
+                    }
+                }
             }
         }
     }
@@ -50,6 +54,38 @@ struct Navigation {
         } else {
             return nil
         }
+    }
+    
+    var isFininshed: Bool = false
+    var travelDistance: Double {
+        if userPathPoints.count > 0 {
+            var sum: Double = 0
+            for i in 0..<userPathPoints.count {
+                if i > 0 {
+                    let prev = userPathPoints[i-1]
+                    let current = userPathPoints[i]
+                    let prevPoint = CLLocationCoordinate2D(latitude: prev.latitude, longitude: prev.longitude)
+                    let currentPoint = CLLocationCoordinate2D(latitude: current.latitude, longitude: current.longitude)
+                    
+                    let d = GMSGeometryDistance(prevPoint, currentPoint)
+                    sum += d
+                }
+            }
+            return sum
+        } else {
+            return 0
+        }
+    }
+    
+    var startDate: Date?
+    var finishDate: Date?
+    
+    var elapsedTime: Double? {
+        if let start = startDate, let finish = finishDate {
+            let elapsed = finish.timeIntervalSince(start)
+            return elapsed
+        }
+        return nil
     }
     
 }
