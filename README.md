@@ -9,7 +9,7 @@ This app is iOS 15.0 and above supported.
 - run `cd ${PATH_OF_YOUR_SOURCE_ROOT}`
 - run `gem install bundler` if you don't have bundler in your environment.
 - run `bundle install` to install cocoapods and cocoapods-keys, which are specified in Gemfile.
-- run `bundle pod install` to install dependencies specified in Podfile.
+- run `bundle exec pod install` to install dependencies specified in Podfile.
 - The firs time your run bundle pod install, you'll be asked to provide the Google Maps API key ,  please provide your own Google Maps API Key.
 - open `map-navigation.xcworkspace` with Xcode, if you run it on simultor, you need to simulate location with xcode debugger.
 
