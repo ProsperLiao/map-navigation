@@ -1,5 +1,7 @@
 # map-navigation
-An exercise to use a map(google map) for navigation. This app is iOS 15.0 and above supported.
+An exercise to use a map(google map) for navigation. It have the features of navigating your for a destination, drawing your travel path, calculating your traveled time and traveled distance.
+You should have a Google Maps Platform API Key to run this app. Check the official document. (Google Maps Platform)[https://developers.google.com/maps]
+This app is iOS 15.0 and above supported.
 
 
 
